@@ -1,4 +1,3 @@
-// src/TicTacToe.js
 import React, { useState } from 'react';
 
 const TicTacToe = () => {
@@ -38,13 +37,13 @@ const TicTacToe = () => {
   const status = winner ? `Winner: ${winner}` : `Next player: ${isXNext ? 'X' : 'O'}`;
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen bg-gray-100">
+    <div className="flex flex-col items-center justify-center h-screen bg-gray-500">
       <h1 className="text-2xl font-bold mb-4">{status}</h1>
       <div className="grid grid-cols-3 gap-2">
         {board.map((value, index) => (
           <button
             key={index}
-            className="w-20 h-20 text-4xl font-bold border border-gray-500 rounded hover:bg-gray-300"
+            className="w-20 h-20 text-4xl font-bold border border-gray-100 rounded hover:bg-gray-300"
             onClick={() => handleClick(index)}
           >
             {value}
